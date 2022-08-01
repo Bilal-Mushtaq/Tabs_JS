@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <button class="tablink" onclick="openPage('Red', this, 'tomato')"  id="defaultOpen">Tab 1</button>
+  <button class="tablink" onclick="openPage('Green', this, 'mediumseagreen')">Tab 2</button>
+  <button class="tablink" onclick="openPage('Blue', this, 'steelblue')">Tab 3</button>
+</div>
+
+<div class="main">
+  <div id="Red" class="tabcontent">
+    <p>JavaScript was initially created to “make web pages alive”. <br>
+      The programs in this language are called scripts. They can be written right in a web page's HTML and run automatically as the page loads. <br> 
+      Scripts are provided and executed as plain text. They don''t need special preparation or compilation to run. <br>
+      In this aspect, JavaScript is very different from another language called Java. <br>
+    </p>
+  </div>
+
+  <div id="Green" class="tabcontent">
+    <p>Modern JavaScript is a “safe” programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it. <br>
+      JavaScript's capabilities greatly depend on the environment it's running in. For instance, Node.js supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc. <br>
+      In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.<br>
+      JavaScript's abilities in the browser are limited for the sake of a user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+    </p>
+  </div>
+
+  <div id="Blue" class="tabcontent">
+    <p>The syntax of JavaScript does not suit everyone's needs. Different people want different features. <br>
+      That's to be expected, because projects and requirements are different for everyone.  <br>
+      So recently a plethora of new languages appeared, which are transpiled (converted) to JavaScript before they run in the browser.     <br> 
+      Modern tools make the transpilation very fast and transparent, actually allowing developers to code in another language and auto-converting it “under the hood”. <br>
+    </p>
+  </div>
+</div>
+
+
+<script>
+function openPage(pageName,el,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  el.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+
+</script>
+   
+</body>
+</html> 

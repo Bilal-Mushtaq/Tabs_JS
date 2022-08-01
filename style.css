@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial;
+  width: 100%;
+  margin-top: 30px;
+}
+.container {
+    display: flex;
+    background-color: #897272;
+    width: 90%;
+    margin: auto;
+}
+/* Styling of tab links */
+.tablink {
+  background-color: #857474;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 18px 20px;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.tablink:hover {
+  background-color: rgb(97, 89, 89);
+}
+
+/* Styling the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  width: 90%;
+  margin: auto;
+}
+
+#Red {
+    background-color: tomato;
+}
+#Green {
+    background-color: mediumseagreen;}
+
+#Blue {
+    background-color: steelblue;
+}
+
+.main p {
+  padding: 1rem 3rem;
+}
